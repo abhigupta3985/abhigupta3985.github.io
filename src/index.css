@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Portfolio Design System */
+
+@layer base {
+  /* LIGHT MODE (default) */
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 240 80% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 180 80% 50%;
+    --secondary-foreground: 240 10% 3.9%;
+
+    --muted: 240 5% 92%;
+    --muted-foreground: 240 3% 46%;
+
+    --accent: 280 65% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 5% 85%;
+    --input: 240 5% 85%;
+    --ring: 240 80% 55%;
+
+    --radius: 0.75rem;
+
+    --gradient-primary: linear-gradient(135deg, hsl(240 80% 55%) 0%, hsl(280 70% 60%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(180 80% 50%) 0%, hsl(240 80% 55%) 100%);
+    --gradient-text: linear-gradient(135deg, hsl(180 80% 50%), hsl(240 80% 55%), hsl(280 70% 60%));
+
+    --shadow-glow: 0 0 40px hsl(240 80% 55% / 0.25);
+    --shadow-card: 0 10px 30px -10px hsl(0 0% 0% / 0.08);
+  }
+
+  /* DARK MODE */
+  .dark {
+    --background: 220 40% 7%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 35% 10%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 35% 10%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 240 80% 65%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 180 80% 55%;
+    --secondary-foreground: 220 40% 7%;
+
+    --muted: 220 25% 20%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 280 70% 60%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 25% 20%;
+    --input: 220 25% 20%;
+    --ring: 240 80% 65%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(240 80% 65%) 0%, hsl(280 70% 60%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(180 80% 55%) 0%, hsl(240 80% 65%) 100%);
+    --gradient-text: linear-gradient(135deg, hsl(180 80% 55%), hsl(240 80% 65%), hsl(280 70% 60%));
+
+    --shadow-glow: 0 0 40px hsl(240 80% 65% / 0.3);
+    --shadow-card: 0 10px 30px -10px hsl(220 40% 7% / 0.5);
+  }
+}
+
+
+
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-['Inter',sans-serif];
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-secondary {
+    background: var(--gradient-secondary);
+  }
+
+  .glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .card-shadow {
+    box-shadow: var(--shadow-card);
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient 8s ease infinite;
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-slide-in-left {
+    animation: slideInLeft 0.8s ease-out forwards;
+  }
+
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.8s ease-out forwards;
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
