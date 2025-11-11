@@ -1,6 +1,40 @@
-# Abhishek Gupta - Developer Portfolio
+# Abhishek Gupta – Portfolio
 
-This is my personal developer portfolio built using React, TypeScript, and Tailwind CSS.
-It showcases my skills, projects, and contact details.
+This is my personal portfolio website built using **React + Vite**.  
+It showcases my **projects, skills and contact information** in a clean, responsive design with **light/dark mode** and **smooth animations**.
+
+---
+
+## 🖥️ Live Link
+🔗 [https://abhigupta3985.github.io/](https://abhigupta3985.github.io/)
+
+---
+
+## 🛠️ Tech Stack
+- **React 18 + Vite + TypeScript**
+- **Tailwind CSS + Tailwind Animate**
+- **Radix UI + Shadcn UI**
+- **Lucide React (Icons)**
+- **React Router DOM**
+- **Responsive Design**
+
+---
+
+## 📄 Sections
+- Home  
+- About  
+- Skills  
+- Projects  
+- GitHub Stats  
+- Contact  
+- Resume (Downloadable)
+
+---
+
+## 📬 Contact
+- **Email:** abhigupta3985@gmail.com  
+- **GitHub:** [github.com/abhigupta3985](https://github.com/abhigupta3985)  
+- **LinkedIn:** [linkedin.com/in/abhishek-d-gupta](https://www.linkedin.com/in/abhishek-d-gupta/)
+
 
 
