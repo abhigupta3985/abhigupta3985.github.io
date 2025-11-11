@@ -10,16 +10,6 @@ It showcases my **projects, skills and contact information** in a clean, respons
 
 ---
 
-## 🛠️ Tech Stack
-- **React 18 + Vite + TypeScript**
-- **Tailwind CSS + Tailwind Animate**
-- **Radix UI + Shadcn UI**
-- **Lucide React (Icons)**
-- **React Router DOM**
-- **Responsive Design**
-
----
-
 ## 📄 Sections
 - Home  
 - About  
