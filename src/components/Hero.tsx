@@ -1,5 +1,7 @@
 import { Github, Linkedin, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import profileImg from "@/assets/Abhishek_Gupta_Photo.jpeg";
+
 
 const Hero = () => {
   const handleResumeClick = () => {
@@ -23,10 +25,9 @@ const Hero = () => {
           <div className="flex justify-center animate-slide-in-right md:order-2">
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-primary rounded-full blur-3xl opacity-30 animate-pulse"></div>
-              <img
-                src="https://github.com/abhigupta3985.png"
-                alt="Abhishek Gupta"
-                className="home-img relative rounded-full w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 object-cover border-4 border-primary glow animate-float"
+              <img src={profileImg} alt="Abhishek Gupta"
+                className="relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full object-cover object-[center_20%] card-shadow border border-border"
+
               />
             </div>
           </div>

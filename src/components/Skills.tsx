@@ -80,22 +80,28 @@ const Skills = () => {
             {techStack.map((skill, index) => (
               <div
                 key={skill.name}
-                className="skills-card bg-card p-6 rounded-xl border border-border card-shadow hover:border-primary hover:scale-105 transition-all duration-300 flex flex-col items-center gap-3 animate-fade-in"
+                className="animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <img
-                  src={skill.icon}
-                  alt={skill.name}
-                  className="skills-card-img w-12 h-12 md:w-16 md:h-16 object-contain"
-                />
-                <p className="skills-card-name text-sm md:text-base font-medium text-center">
-                  {skill.name}
-                </p>
+                <div
+                  className="skills-card bg-card p-6 rounded-xl border border-border card-shadow
+                             transition-all duration-300 ease-out
+                             hover:border-primary hover:bg-primary/5 hover:scale-105
+                             flex flex-col items-center gap-3"
+                >
+                  <img
+                    src={skill.icon}
+                    alt={skill.name}
+                    className="skills-card-img w-12 h-12 md:w-16 md:h-16 object-contain"
+                  />
+                  <p className="skills-card-name text-sm md:text-base font-medium text-center">
+                    {skill.name}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
         </div>
-
         {/* Tools */}
         <div>
           <h3 className="text-2xl font-semibold text-center mb-8 text-secondary">
@@ -105,17 +111,35 @@ const Skills = () => {
             {tools.map((tool, index) => (
               <div
                 key={tool.name}
-                className="skills-card bg-card p-6 rounded-xl border border-border card-shadow hover:border-secondary hover:scale-105 transition-all duration-300 flex flex-col items-center gap-3 animate-fade-in"
+                className="animate-fade-in"
                 style={{ animationDelay: `${(techStack.length + index) * 0.1}s` }}
               >
-                <img
-                  src={tool.icon}
-                  alt={tool.name}
-                  className="skills-card-img w-12 h-12 md:w-16 md:h-16 object-contain"
-                />
-                <p className="skills-card-name text-sm md:text-base font-medium text-center">
-                  {tool.name}
-                </p>
+                <div
+                  className="
+                    skills-card
+                    bg-card
+                    p-6
+                    rounded-xl
+                    border border-border
+                    card-shadow
+                    transition-all duration-300 ease-out
+                    hover:border-secondary
+                    hover:bg-secondary/5
+                    hover:scale-105
+                    flex flex-col
+                    items-center
+                    gap-3
+                   "
+                >
+                  <img
+                    src={tool.icon}
+                    alt={tool.name}
+                    className="w-12 h-12 md:w-16 md:h-16 object-contain"
+                  />
+                  <p className="text-sm md:text-base font-medium text-center">
+                    {tool.name}
+                  </p>
+                </div>
               </div>
             ))}
           </div>

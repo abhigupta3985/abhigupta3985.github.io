@@ -33,56 +33,61 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 md:py-32 bg-card/30">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 gradient-text">
-          Featured Projects
-        </h2>
-        <p className="text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
-          A showcase of my recent work and personal projects
-        </p>
+  <section id="projects" className="py-20 md:py-32 bg-card/30">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 gradient-text">
+        Featured Projects
+      </h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {projects.map((project, index) => (
+      <p className="text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
+        A showcase of my recent work and personal projects
+      </p>
+
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        {projects.map((project, index) => (
+          <div
+            key={project.title}
+            className="animate-fade-in h-full"
+            style={{ animationDelay: `${index * 0.2}s` }}
+          >
             <div
-              key={project.title}
-              className="project-card bg-card rounded-xl border border-border card-shadow hover:border-primary transition-all duration-300 overflow-hidden group animate-fade-in"
-              style={{ animationDelay: `${index * 0.2}s` }}
+              className="
+                project-card
+                h-full
+                bg-card
+                rounded-xl
+                border border-border
+                card-shadow
+                flex flex-col
+                transition-all duration-300 ease-out
+                hover:border-primary
+                hover:shadow-lg
+                hover:scale-[1.025]
+                overflow-hidden
+                group
+              "
             >
               {/* Project Image */}
-            
-              {/* <div className="relative overflow-hidden h-48">
+              <div className="relative overflow-hidden h-56 rounded-t-xl">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  className="w-full h-full object-cover object-center transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60"></div>
-              </div> */}
-
-              <div className="relative overflow-hidden h-56 rounded-t-xl">
-  <img
-    src={project.image}
-    alt={project.title}
-    className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
-  />
-  <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent"></div>
-</div>
-
-
-
+                <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
+              </div>
 
               {/* Project Content */}
-              <div className="p-6">
-                <h3 className="project-title text-xl md:text-2xl font-bold mb-3">
+              <div className="p-6 flex flex-col flex-1">
+                <h3 className="text-xl md:text-2xl font-bold mb-3">
                   {project.title}
                 </h3>
-                <p className="project-description text-muted-foreground mb-4 text-sm md:text-base">
+
+                <p className="text-muted-foreground mb-4 text-sm md:text-base">
                   {project.description}
                 </p>
 
-                {/* Tech Stack */}
-                <div className="project-tech-stack flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-2 mb-4">
                   {project.techStack.map((tech) => (
                     <span
                       key={tech}
@@ -93,13 +98,12 @@ const Projects = () => {
                   ))}
                 </div>
 
-                {/* Links */}
-                <div className="flex gap-3">
+                <div className="flex gap-3 mt-auto">
                   <Button
                     asChild
                     variant="outline"
                     size="sm"
-                    className="project-github-link flex-1 border-primary/50 hover:bg-primary hover:text-primary-foreground"
+                    className="flex-1 border-primary/50 hover:bg-primary hover:text-primary-foreground"
                   >
                     <a
                       href={project.github}
@@ -111,10 +115,11 @@ const Projects = () => {
                       Code
                     </a>
                   </Button>
+
                   <Button
                     asChild
                     size="sm"
-                    className="project-deployed-link flex-1 gradient-primary hover:opacity-90"
+                    className="flex-1 gradient-primary hover:opacity-90"
                   >
                     <a
                       href={project.live}
@@ -129,11 +134,13 @@ const Projects = () => {
                 </div>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
-    </section>
-  );
+    </div>
+  </section>
+);
 };
+
 
 export default Projects;

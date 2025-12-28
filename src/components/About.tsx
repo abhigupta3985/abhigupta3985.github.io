@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { GraduationCap, Code2, Sparkles } from 'lucide-react';
+import profileImg from "@/assets/Abhishek_Gupta_Photo.jpeg";
 
 const About = () => {
   const handleResumeClick = () => {
@@ -30,10 +31,9 @@ const About = () => {
           <div className="flex justify-center animate-fade-in">
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-secondary rounded-2xl blur-2xl opacity-20"></div>
-              <img
-                src="https://github.com/abhigupta3985.png"
-                alt="Profile"
-                className="relative rounded-2xl w-full max-w-md object-cover card-shadow border border-border"
+              <img src={profileImg} alt="Abhishek Gupta"
+                className="relative rounded-2xl w-full max-w-md object-cover object-top card-shadow border border-border"
+
               />
             </div>
           </div>
